@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gallery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      text-align: left;
+      font-size: medium;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+      margin-top: 20px;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .gallery-item img {
+      width: 250px;
+      height:250px;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      z-index: 9999;
+      overflow: auto;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      display: block;
+      margin: 0 auto;
+      margin-top: 20px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: #fff;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    footer{
+	padding: 8px;
+	text-align: center;
+	background-color: #333;
+	color: #eee;
+  }
+
+    
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Partners in Japan</h1>
+
+    
+
+      <div class="gallery-item" onclick="openLightbox('japan')">
+        <img src="images/japan.jpg" alt="image2">
+        <p><b>Name</b>-Tanaka Mana<br>
+          <b>Company Nmae</b>-Bangladesh Tour Co,Travel<br>
+          <b>Address</b>-Bangladesh Tour Co,Travel,6008861 帝都京都府 府京都市下京区七条御所ノ内北町69日本<br>
+
+          <b>Gmail</b>-bdtour.jp.tourweb@gmail.com<br>
+          
+          <b>Contract</b>-070-1776-8084
+        </p>
+      </div>
+
+      
+
+
+     
+
+      
+        
+   
+      
+      <!-- Add more gallery items as needed -->
+    </div>
+    <div class="lightbox" id="lightbox">
+      <span class="close-btn" onclick="closeLightbox()">&times;</span>
+      <img src="" alt="Lightbox Image" id="lightbox-image">
+    </div>
+  </div>
+
+  <script>
+    function openLightbox(imageSrc) {
+      var lightbox = document.getElementById("lightbox");
+      var lightboxImage = document.getElementById("lightbox-image");
+      lightboxImage.src = "images/" + imageSrc;
+      lightbox.style.display = "block";
+    }
+
+    function closeLightbox() {
+      var lightbox = document.getElementById("lightbox");
+      lightbox.style.display = "none";
+    }
+  </script>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+
+<footer>
+		
+  © Bangladesh Tour 2023 All Rights Reserved
+
+
+</footer>
+</body>
+</html>

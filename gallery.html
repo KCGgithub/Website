@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Gallery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 20px;
+      margin-top: 20px;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.1);
+    }
+
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.9);
+      z-index: 9999;
+      overflow: auto;
+    }
+
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      display: block;
+      margin: 0 auto;
+      margin-top: 20px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    }
+
+    .close-btn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      color: #fff;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    
+    footer{
+	padding: 8px;
+	text-align: center;
+	background-color: #333;
+	color: #eee;
+  }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Gallery</h1>
+
+    <div class="gallery">
+      <div class="gallery-item" onclick="openLightbox('image3')">
+        <img src="images/image3.jpeg" alt="image3">
+        <h1>Rangamathi</h1>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox('image2')">
+        <img src="images/image2.jpeg" alt="image2">
+        <h1>Mymensingh</h1>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox('image4')">
+        <img src="images/image4.jpeg" alt="image4">
+        <h1>Kagrachori</h1>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox('image(5)')">
+        <img src="images/images (9).jpeg" alt="image9">
+        <h1>Rangpur</h1>
+      </div>
+
+      
+
+      <div class="gallery-item" onclick="openLightbox('image(9)')">
+        <img src="images/images (11).jpeg" alt="image9">
+        <h1>Moheskhali</h1>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox('image(5)')">
+        <img src="images/images (12).jpeg" alt="image9">
+        <h1>bhola</h1>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox('image(5)')">
+        <img src="images/images (13).jpeg" alt="image9">
+        <h1>Rajshahi</h1>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox('image(5)')">
+        <img src="images/images (14).jpeg" alt="image9">
+        <h1>Khulna</h1>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox('image(5)')">
+        <img src="images/images (14).jpeg" alt="image9">
+        <h1>Chattogram</h1>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox('image(5)')">
+        <img src="images/images (15).jpeg" alt="image9">
+        <h1>Srimangal</h1>
+      </div>
+      <div class="gallery-item" onclick="openLightbox('image(5)')">
+        <img src="images/images (16).jpeg" alt="image9">
+        <h1>Bandarban</h1>
+      </div>
+      
+      <div class="gallery-item" onclick="openLightbox('image(5)')">
+        <img src="images/images (17).jpeg" alt="image9">
+        <h1>Paharpur</h1>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox('image(5)')">
+        <img src="images/images (18).jpeg" alt="image9">
+        <h1>Kuakata</h1>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox('image(5)')">
+        <img src="images/images (20).jpeg" alt="image9">
+        <h1>Amiakum</h1>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox('image(5)')">
+        <img src="images/images (19).jpeg" alt="image9">
+        <h1>Bgharhat</h1>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox('image(5)')">
+        <img src="images/images (20).jpeg" alt="image9">
+        <h1>Sonargohn</h1>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox('image(5)')">
+        <img src="images/images (21).jpeg" alt="image9">
+        <h1>comilla</h1>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox('image(5)')">
+        <img src="images/images (22).jpeg" alt="image9">
+        <h1>bogura</h1>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox('image(5)')">
+        <img src="images/images (23).jpeg" alt="image9">
+        <h1>Gaur</h1>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox('image(5)')">
+        <img src="images/images (24).jpeg" alt="image9">
+        <h1>Barishal</h1>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox('image(5)')">
+        <img src="images/images (25).jpeg" alt="image9">
+        <h1>puthia</h1>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox('image(5)')">
+        <img src="images/images (26).jpeg" alt="image9">
+        <h1>Ramna</h1>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox('image(5)')">
+        <img src="images/images (27).jpeg" alt="image9">
+        <h1>Taj</h1>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox('image(5)')">
+        <img src="images/images (28).jpeg" alt="image9">
+        <h1>churash</h1>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox('image(5)')">
+        <img src="images/images (29).jpeg" alt="image9">
+        <h1>Rangamathi</h1>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox('image(5)')">
+        <img src="images/images (30).jpeg" alt="image9">
+        <h1>Agricultutural</h1>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox('image(5)')">
+        <img src="images/images (31).jpeg" alt="image9">
+        <h1>Khulna</h1>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox('image(5)')">
+        <img src="images/images (32).jpeg" alt="image9">
+        <h1>Jashore</h1>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox('image(5)')">
+        <img src="images/images (33).jpeg" alt="image9">
+        <h1>New market</h1>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox('image(5)')">
+        <img src="images/images (34).jpeg" alt="image9">
+        <h1>Old Dhaka</h1>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox('image(5)')">
+        <img src="images/images (35).jpeg" alt="image9">
+        <h1>Chotrakpur</h1>
+      </div>
+
+      <div class="gallery-item" onclick="openLightbox('image(5)')">
+        <img src="images/images (36).jpeg" alt="image9">
+        <h1>Bhuluka</h1>
+      </div>
+      <div class="gallery-item" onclick="openLightbox('image(5)')">
+        <img src="images/images (37).jpeg" alt="image9">
+        <h1>Nohakhali</h1>
+      </div>
+      <div class="gallery-item" onclick="openLightbox('image(5)')">
+        <img src="images/images (38).jpeg" alt="image9">
+        <h1>Mongla</h1>
+        
+      </div>
+
+      
+      <!-- Add more gallery items as needed -->
+    </div>
+    <div class="lightbox" id="lightbox">
+      <span class="close-btn" onclick="closeLightbox()">&times;</span>
+      <img src="" alt="Lightbox Image" id="lightbox-image">
+    </div>
+  </div>
+
+  <script>
+    function openLightbox(imageSrc) {
+      var lightbox = document.getElementById("lightbox");
+      var lightboxImage = document.getElementById("lightbox-image");
+      lightboxImage.src = "images/" + imageSrc;
+      lightbox.style.display = "block";
+    }
+
+    function closeLightbox() {
+      var lightbox = document.getElementById("lightbox");
+      lightbox.style.display = "none";
+    }
+  </script>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+<footer>
+  
+© Bangladesh Tour 2023 All Rights Reserved
+
+
+</footer>
+</body>
+</html>

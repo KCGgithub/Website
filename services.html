@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Travel Services</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    .service {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .service img {
+      width: 100px;
+      height: 100px;
+      margin-right: 20px;
+    }
+
+    .service h2 {
+      margin: 0;
+    }
+
+    .service p {
+      margin-top: 5px;
+    }
+
+    .service button {
+      background-color: #4caf50;
+      color: white;
+      padding: 8px 16px;
+      border: none;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .service button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Our Services</h1>
+
+    <div class="service">
+      <img src="images/hotel.jpg" alt="Hotel">
+      <div>
+        <h2>Hotel Reservations</h2>
+        <p>Find and book hotels at your destination.</p>
+        <button onclick="bookHotel()">Book Now</button>
+      </div>
+    </div>
+
+    <div class="service">
+      <img src="images/flights.jpg" alt="Flights">
+      <div>
+        <h2>Flight Bookings</h2>
+        <p>Search and book flights for your travel.</p>
+        <button onclick="bookFlight()">Book Now</button>
+      </div>
+    </div>
+
+    <div class="service">
+      <img src="images/tours.jpg" alt="Tours">
+      <div>
+        <h2>Guided Tours</h2>
+        <p>Explore popular attractions with our guided tours.</p>
+        <button onclick="bookTour()">Book Now</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function bookHotel() {
+      // Logic for booking a hotel
+      console.log("Hotel booking initiated.");
+    }
+
+    function bookFlight() {
+      // Logic for booking a flight
+      console.log("Flight booking initiated.");
+    }
+
+    function bookTour() {
+      // Logic for booking a tour
+      console.log("Tour booking initiated.");
+    }
+  </script>
+</body>
+</html>
